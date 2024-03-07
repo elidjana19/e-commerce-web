@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6" *ngIf="true">
+            <a routerLink="../../products" class="btn btn-sm btn-dark mb-3">Back</a>
+            <img src="{{showData.productUrl}}">
+           <h3>Product details:</h3>
+           <p class="para" style="font-weight:bold">Details:</p>
+           <p class="para">{{showData.productDetail}}</p>
+           <p>{{showData.productSize}}</p>
+           <p>{{showData.productPrice | currency:'USD'}}</p>
+
+           <button class="btn btn-dark" (click)="addtoCart(showData)">Add to cart</button>
+
+        </div>
+
+        <!-- <div class="col-lg-6">
+            <form>
+                <h1>Your corner to make the order</h1>
+                    <input type="text" class="form-control" placeholder="FULL NAME">
+                    <input type="text"class="form-control"  placeholder="City">
+                    <button class="btn btn-md btn-dark mt-2 ">ORDER IT</button>
+                
+            </form>
+        </div> -->
+
+       
+       
+    </div>
+</div>

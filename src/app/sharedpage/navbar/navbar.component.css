@@ -1,0 +1,14 @@
+.container-fluid{
+    height:60px
+}
+.navbar-brand{
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+.navbar-nav .nav-link.active-link{
+    color:red;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration:underline
+}

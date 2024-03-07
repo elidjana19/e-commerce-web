@@ -1,0 +1,53 @@
+
+<ng-container *ngIf="products.length != 0">
+    <button class="btn btn-dark mx-2" routerLink="/products">Back to products</button>
+    <div class="card-table">
+        <div class="card-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sr.no</th>
+                        <th>product name</th>
+                        <th>product image</th>
+                        <th>description</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th>total</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products, let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.productName}}</td>
+                        <td><img class="ima" src="{{item.productUrl}}"></td>
+                        <td>{{item.productDetail}}</td>
+                        <td>{{item.productPrice}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.total}}</td>
+                        <!-- <td><button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash"></i></button></td> -->
+                       
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="4"></td>
+                        <td class="btn btn-primary" (click)="emptyCart()">Empty Cart</td>
+                        <td><strong>Grand Total: {{grandTotal}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+           
+
+        </div>
+
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length == 0">
+    <div class="div">
+        <h1>Your card is empty</h1>
+        <button class="btn btn-dark" routerLink="/products">Shop now</button>
+    </div>
+</ng-container>

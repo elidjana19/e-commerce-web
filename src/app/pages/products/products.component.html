@@ -1,0 +1,15 @@
+<h1>PRODUCT LIST</h1>
+
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-lg-4 mt-3" *ngFor="let product of products">
+            <div class="description">
+                <img src="{{product.productUrl}}">
+                <a style="text-decoration:none; font-weight:bold">{{product.productName}}</a>
+                <h6 class="para">{{product.productPrice | currency: 'USD'}}</h6>
+                
+                <!-- the link is taking me to singlepage of the clicked product -->
+                <a class="orderbtn" [routerLink]=" ['/products', product.id]">View</a>
+            </div>
+        </div>
+    </div>

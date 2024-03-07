@@ -1,0 +1,15 @@
+.container{
+    background-color: rgb(210, 208, 208) ;
+    height:750px
+}
+/* .image{
+    height:400px;
+} */
+.coll{
+    background: url('https://cdn.shopify.com/s/files/1/0606/5451/8510/files/Zaira-Water_2000x.jpg?v=1653084056');
+    background-size: 100%;
+    height:750px;
+}
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
